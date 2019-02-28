@@ -1,0 +1,41 @@
+{
+  "name": "sedona",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxBocharnikov/sedona.git"
+  },
+  "author": "Max Bocharnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxBocharnikov/sedona/issues"
+  },
+  "homepage": "https://github.com/MaxBocharnikov/sedona#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-inject": "^5.0.2",
+    "gulp-inject-svg": "^0.1.18",
+    "gulp-less": "^4.0.1",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "imagemin-pngquant": "^7.0.0"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.4.0"
+  }
+}
