@@ -1,0 +1,63 @@
+
+/* pt-sans-regular - cyrillic_latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v10-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v10-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+}
+/* pt-sans-700 - cyrillic_latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt-sans-v10-cyrillic_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v10-cyrillic_latin-700.woff') format('woff'), /* Modern Browsers */
+}
+
+
+html,body {
+	min-width:320px;
+  min-height: 100vh;
+	font-size:14px;
+	line-height:21px;
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+
+	margin: 0;
+	padding:0;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+.wrapper {
+  position: relative;
+  width: auto;
+  max-width: 1200px;
+}
+
+
+/*@media(min-width: @tablet-width) {
+  .wrapper {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+*/
+
+@media(min-width: @desktop-width) {
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+
+
+

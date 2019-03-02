@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber');
  	less = require('gulp-less'),
 	prefixer = require('gulp-autoprefixer'),
 	watch = require('gulp-watch'),
@@ -8,8 +9,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     svgstore = require("gulp-svgstore"),
     browserSync = require("browser-sync"),
-    injectSvg = require('gulp-inject-svg'),
-    injectSvgOptions = { base: '/src' },
+    embedSvg = require('gulp-embed-svg'),
     webp = require("gulp-webp"),
     del = require('del');
     reload = browserSync.reload;
@@ -28,7 +28,8 @@ var path = {
         style: 'src/less/style.less',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         svg: 'src/img/**/icon-*.svg',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        imgfolder: 'src/img/'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
@@ -60,7 +61,11 @@ var config = {
 
 gulp.task('html:build', function (done) {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(injectSvg(injectSvgOptions))
+        .pipe(plumber())
+        .pipe(embedSvg({
+            selectors: '.sprite-svg', // only replace tags with the class inline-svg
+            root: 'src/img'
+        }))
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
         done();
@@ -71,6 +76,7 @@ gulp.task('html:build', function (done) {
 
 gulp.task('js:build', function (done) {
     gulp.src(path.src.js) //Найдем наш main файл
+        .pipe(plumber())
         .pipe(uglify()) //Сожмем наш js
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
@@ -80,6 +86,7 @@ gulp.task('js:build', function (done) {
 
 gulp.task('style:build', function (done) {
     gulp.src(path.src.style) //Выберем наш main.scss
+        .pipe(plumber())
         .pipe(less()) //Скомпилируем
         .pipe(prefixer({
         	browsers: ['> 1%, Last 2 versions, iOS 11'],
@@ -95,6 +102,7 @@ gulp.task('style:build', function (done) {
 
 gulp.task('image:build', function (done) {
     gulp.src(path.src.img) //Выберем наши картинки
+        .pipe(plumber())
         .pipe(imagemin([
             imagemin.jpegtran({progressive: true}),
             imagemin.optipng({optimizationLevel: 3}),
@@ -112,19 +120,23 @@ gulp.task('image:build', function (done) {
 
 gulp.task('svg:store', function(done){
     gulp.src(path.src.svg)
+    .pipe(plumber())
     .pipe(svgstore({
         inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest(path.src.img));
+    .pipe(gulp.dest(path.src.imgfolder))
+    .pipe(reload({stream: true}));
     done();
 });
 
 
 gulp.task("image:webp", function(done) {
   return gulp.src("src/img/**/*.{png,jpg}")
+    .pipe(plumber())
     .pipe(webp({quality: 90})) /* Конвертируем png/jpg в webp с легкой потерей качества изображения */
-    .pipe(gulp.dest(path.build.img));
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({stream: true}));
     done();
 });
 
@@ -144,13 +156,13 @@ gulp.task("clean", function(done) {
 
 
 gulp.task('build', gulp.series(
+    'svg:store',
     'clean',
     'html:build',
     'js:build',
     'style:build',
     'fonts:build',
     'image:build',
-    'svg:store',
     'image:webp'
     ), function(done) {
         done();
