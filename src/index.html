@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>!DOCTYPE</title>
+   <title>Sedona</title>
    <meta charset="utf-8">
+   <meta name="viewport" content="width=500, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
  <body>
- 	<div style="display: none">
- 		<img src="/img/sprite.svg" data-skip-inject-svg class="icon--exclamation-mark">
- 	</div>
+  	<div style="display: none">
+		<svg src="sprite.svg" class="sprite-svg"></svg>
+	</div>
 
  	<header class="page-header wrapper">
- 		<a class="page-header__logo" href="">
- 			<img src="#" alt="logo">
- 		</a>
-
+ 		
  		<nav class="page-header__nav nav">
+ 			<button class="nav__toggle nav__toggle--close">
+ 				<svg width="23" height="21">
+         			 <use xlink:href="#icon-cross"></use>
+        		</svg>
+ 			</button>
+
+
  			
- 			<ul class="nav__list nav__list--left">
+ 			<ul class="nav__list nav__list--right">
  				<li class="nav__item">
  					<a href="#">Главная</a>
+ 				</li>
+ 				<li class="nav__item">
  					<a href="#">Фото и видео</a>
  				</li>
  			</ul>
@@ -27,11 +34,28 @@
  			<ul class="nav__list nav__list--right">
  				<li class="nav__item">
  					<a href="#">Форма отзыва</a>
- 					<a href="#">Html Academy</a>
  				</li>
+ 				<li class="nav__item">
+ 					<a href="#">Html Academy</a>
+ 				</li>				
  			</ul>
 
  		</nav>
+		
+ 		<a class="page-header__logo" href="#">
+ 			<picture>
+ 				<source srcset="img/logotype-desktop.svg"  media="(min-width: 1200px)">
+	 			<source srcset="img/logotype-tablet.svg"  media="(min-width: 768px)">
+	 		    <img src="img/logotyle-mobile.svg" alt="logo">
+ 			</picture>
+ 		</a>
+
+
+ 		<button class="page-header__toggle">
+ 				<svg width="23" height="21">
+         			 <use xlink:href="#icon-menu"></use>
+        		</svg>
+ 		</button>
  	</header>
 
 
@@ -136,7 +160,7 @@
  			</div>
  		</article>
 
- 		<section class="find-us">
+ 		<section class="find-us wrapper">
  			<h2 class="find-us__title">Заинтересовались?</h2>
  			<p class="find-us__description">Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения предложения гостиницы в седоне</p>
  			<a class="find-us__button button" type="button" href="#">Найти гостиницу</a>
@@ -166,6 +190,6 @@
  	</footer>
 
 
-
+<script type="text/javascript" src="js/script.js"></script>
  </body> 
 </html>

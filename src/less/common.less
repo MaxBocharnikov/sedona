@@ -19,8 +19,9 @@
 }
 
 
-body {
+html,body {
 	min-width:320px;
+  min-height: 100vh;
 	font-size:14px;
 	line-height:21px;
 	font-family: 'PT Sans', sans-serif;
@@ -32,27 +33,29 @@ body {
 
 
 img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 
 .wrapper {
+  position: relative;
   width: auto;
+  max-width: 1200px;
 }
 
 
-@media(min-width: @tablet-width) {
+/*@media(min-width: @tablet-width) {
   .wrapper {
     width: 768px;
     margin: 0 auto;
   }
 }
-
+*/
 
 @media(min-width: @desktop-width) {
   .wrapper {
-    width: 1200px;
+    margin: 0 auto;
   }
 }
 
