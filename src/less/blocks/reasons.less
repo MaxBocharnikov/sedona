@@ -17,7 +17,7 @@
 
 
 
-.reason__text {
+.reason__text--first {
 	padding-top: 85px;
 	padding-bottom: 43px;
 
@@ -73,14 +73,62 @@
 }
 
 
-.reason__img {
-
-	
+.reason__img--first {
+	height: 256px;
+	background-image: url("../img/photo-city.svg");
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+	background-size: 100% 256px;	
 }
-
 
 @media(min-width: @tablet-width) {
 	.reasons__title {
-		margin-bottom: 52px;
+		margin-bottom: 43px;
 	}
+
+	.reason__header {
+		display: flex;
+	}
+
+	.reason__text--first {
+		width: 33.3333%;
+		padding: 48px 0;
+		height: 256px;
+		box-sizing: border-box;
+
+
+		background-image: none;
+		background-color: #8EB7D6;
+	}
+
+	.reason__img {
+		width: 66.6666%;
+	}
+
+	.reason__title--first {
+		width: 66%;
+		min-height: 45px;
+		line-height: 26px;
+		margin-bottom: 10px;
+	}
+
+	.reason__number--first {
+		width: 66%;
+	}
+	
+	.reason__description--first {
+		width: 66%;
+	}	
+}
+
+@media(min-width: @desktop-width) {
+	.reason__title--first {
+		width: 31%;
+	}
+
+	.reason__text--first {
+		padding: 55px 0;
+	}
+
+
 }
