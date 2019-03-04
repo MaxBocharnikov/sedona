@@ -1,0 +1,131 @@
+.option {
+	position: relative;
+	margin-left: 22%;
+
+	& svg {
+		position: absolute;
+		top: -8px;
+		left: -50px;
+
+		fill: #69B1D3;
+	}
+
+}
+
+.option--house {
+	& svg {
+		width: 39px;
+		height: 37px;
+	}
+}
+
+.option--gift {
+	& svg {
+		width: 32px;
+		height: 38px;
+	}
+}
+
+.option--burger {
+	& svg {
+		width: 40px;
+		height: 35px;
+	}
+}
+
+.option__header  {
+	.default;
+	display: block;
+	margin-bottom: 17px;
+
+	font-size: 18px;
+	line-height: 26px;
+	text-transform: uppercase;
+
+
+}
+
+.option__description {
+	.default;
+	margin-bottom: 32px;
+
+	font-size: 14px;
+	line-height: 21px;
+	color: @dark_gray;
+	text-transform: uppercase;
+
+	& br {
+		display: none;
+	}
+}
+
+
+@media (min-width: @tablet-width) {
+	.option {
+		width: 33.3333%;
+		margin: 0;
+		margin-top: 163px;
+		margin-bottom: 136px;
+
+		& svg {
+			top: -99px; 
+			left: 0;
+			right: 0;
+
+			margin: 0 auto;   		
+		}
+	}
+
+
+	.option--house {
+		& svg {
+			width: 75px;
+			height: 72px;
+
+		}
+	}
+
+	.option--gift {
+		order: 3;
+		& svg {
+			width: 64px;
+			height: 75px;
+
+		}
+	}
+
+	.option--burger {
+		order: 2;
+		& svg {
+			width: 77px;
+			height: 68px;
+
+		}
+	}
+
+
+	.option__header {
+		text-align: center;
+		font-size: 21px;
+
+		margin-bottom: 27px;
+	}
+
+	.option__description  {
+		text-align: center;
+		//margin: 0 17%;
+		width: 65%;
+		margin: 0 auto;
+		margin-bottom: 0;
+	}
+
+}
+
+
+@media (min-width: @desktop-width) {
+	.option__description {
+		& br {
+			display: block;
+		}
+	}
+}
