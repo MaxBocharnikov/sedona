@@ -35,7 +35,14 @@
 }
 
 
-.reason__title--first {
+.reason__text--second {
+	padding: 44px 0;
+	background-color: #69B1D3;
+	text-align: center;
+}
+
+.reason__title--first, 
+.reason__title--second {
 	width: 87%;
 	margin: 0 auto;
 	margin-bottom: 20px;
@@ -45,10 +52,19 @@
 	font-weight: normal;
 	text-transform: uppercase;
 	color: #ffffff;
+
+	& br {
+		display: none;
+	}
+}
+
+.reason__title--second {
+	font-weight: normal;
 }
 
 
-.reason__number--first {
+.reason__number--first,
+.reason__number--second {
 	.default;
 	width: 87%;
 	margin: 0 auto;
@@ -62,8 +78,9 @@
 	margin-bottom: 20px;
 }
 
-.reason__description--first {
-	width: 87%;
+.reason__description--first,
+.reason__description--second {
+	width: 71%;
 	margin: 0 auto;
 
 	font-size: 14px;
@@ -73,16 +90,31 @@
 }
 
 
-.reason__img--first {
+.reason__img--first
+{
 	height: 256px;
-	background-image: url("../img/photo-city.svg");
+	background-image: url("../img/photo-city-tablet.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% bottom;
-	background-size: 100% 256px;	
+	//background-size: 100% 256px;
+	background-size: cover;	
+}
+
+.reason__img--second {
+	height: 256px;
+	background-image: url("../img/photo-bridge-tablet.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	//background-size: 100% 256px;
+
+	background-size: cover;
+
+
 }
 
 .reason__options {
 	padding: 38px 0;
+	padding-bottom: 11px;
 }
 
 @media(min-width: @tablet-width) {
@@ -94,7 +126,8 @@
 		display: flex;
 	}
 
-	.reason__text--first {
+	.reason__text--first,
+	.reason__text--second {
 		width: 33.3333%;
 		padding: 48px 0;
 		height: 256px;
@@ -109,19 +142,35 @@
 		width: 66.6666%;
 	}
 
-	.reason__title--first {
+	.reason__title--first,
+	.reason__title--second {
 		width: 66%;
 		min-height: 45px;
 		line-height: 26px;
 		margin-bottom: 10px;
 	}
 
-	.reason__number--first {
+	.reason__number--first,
+	.reason__number--second {
 		width: 66%;
 	}
 	
-	.reason__description--first {
+	.reason__description--first
+	 {
 		width: 66%;
+	}
+
+	.reason__description--second  {
+		width: 58%;
+	}
+
+	.reason__img--first {
+		background-image: url("../img/photo-city-desktop.jpg");
+	}
+
+	.reason__img--second {
+		order: -1;
+		background-image: url("../img/photo-bridge-desktop.jpg");
 	}
 
 	.reason__options {
@@ -135,7 +184,16 @@
 		width: 31%;
 	}
 
-	.reason__text--first {
+	.reason__title--second {
+		width: 40%;
+
+		& br {
+			display: block;
+		}
+	}
+
+	.reason__text--first,
+	.reason__text--second {
 		padding: 55px 0;
 	}
 
