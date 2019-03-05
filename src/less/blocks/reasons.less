@@ -1,3 +1,4 @@
+
 .reasons__title {
 	display: block;
 	width: 80%;
@@ -16,8 +17,81 @@
 }
 
 
+.reason__text {
+	position: relative;
+	padding: 30px 0;
 
-.reason__text--first {
+	background-color: #EEEEEE;
+
+	&::after {
+		content: "";
+		position: absolute;
+
+		width: 88%;
+		height: 1px;
+
+		left: 0;
+		right: 0;
+
+		bottom: 0;
+
+		margin: 0 auto;
+
+		background-color: #D6D6D6;
+	}
+
+	&--last {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+
+.reason__title {
+	.default;
+	margin: 0 13%;
+	margin-bottom: 20px;
+
+	text-align: center; 
+	font-size: 18px; 
+	line-height: 26px; 
+	font-weight:bold; 
+	text-transform: uppercase; 
+	color: #000000; 
+
+	& br {
+		display: none;
+	}
+}
+
+.reason__number {
+	.default;
+	margin: 0 13%;
+	margin-bottom: 20px;
+
+	text-align: center;
+	text-transform: uppercase;  
+	font-size: 14px;
+	line-height: 21px;
+	color: @dark_gray;
+
+}
+
+
+.reason__description {
+	margin: 0 13%;
+
+	text-align: center;
+	text-transform: uppercase;  
+	font-size: 14px;
+	line-height: 21px;
+	color: @dark_gray;
+
+}
+
+
+.reason__text--city {
 	padding-top: 85px;
 	padding-bottom: 43px;
 
@@ -35,14 +109,14 @@
 }
 
 
-.reason__text--second {
+.reason__text--bridge {
 	padding: 44px 0;
 	background-color: #69B1D3;
 	text-align: center;
 }
 
-.reason__title--first, 
-.reason__title--second {
+.reason__title--city, 
+.reason__title--bridge {
 	width: 87%;
 	margin: 0 auto;
 	margin-bottom: 20px;
@@ -58,13 +132,13 @@
 	}
 }
 
-.reason__title--second {
+.reason__title--bridge {
 	font-weight: normal;
 }
 
 
-.reason__number--first,
-.reason__number--second {
+.reason__number--city,
+.reason__number--bridge {
 	.default;
 	width: 87%;
 	margin: 0 auto;
@@ -78,8 +152,8 @@
 	margin-bottom: 20px;
 }
 
-.reason__description--first,
-.reason__description--second {
+.reason__description--city,
+.reason__description--bridge {
 	width: 71%;
 	margin: 0 auto;
 
@@ -90,7 +164,7 @@
 }
 
 
-.reason__img--first
+.reason__img--city
 {
 	height: 256px;
 	background-image: url("../img/photo-city-tablet.jpg");
@@ -100,7 +174,7 @@
 	background-size: cover;	
 }
 
-.reason__img--second {
+.reason__img--bridge {
 	height: 256px;
 	background-image: url("../img/photo-bridge-tablet.jpg");
 	background-repeat: no-repeat;
@@ -117,17 +191,65 @@
 	padding-bottom: 11px;
 }
 
+
+
 @media(min-width: @tablet-width) {
+
+	.reasons__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.reason__text {
+		padding: 48px 0;
+		height: 100%;
+		box-sizing: border-box;	
+
+		display: flex;
+		flex-direction: column;
+		
+		&::after {
+			display: none;
+		}
+
+
+ 	}
+
+	.reason__title {
+		font-size: 21px;
+		flex-grow: 1;
+
+		& br {
+			display: block;
+		}
+	}
+
+
+	.reason--bridge,
+	.reason--city {
+		width: 100%;
+	}
+
+	.reason--common {
+		width: 33.3333%;
+	}
+
 	.reasons__title {
 		margin-bottom: 43px;
 	}
 
 	.reason__header {
-		display: flex;
+		height: 100%;
 	}
 
-	.reason__text--first,
-	.reason__text--second {
+	.reason__header--city,
+	.reason__header--bridge {
+		display: flex;
+		height: auto;
+	}
+
+	.reason__text--city,
+	.reason__text--bridge {
 		width: 33.3333%;
 		padding: 48px 0;
 		height: 256px;
@@ -142,33 +264,33 @@
 		width: 66.6666%;
 	}
 
-	.reason__title--first,
-	.reason__title--second {
+	.reason__title--city,
+	.reason__title--bridge {
 		width: 66%;
 		min-height: 45px;
 		line-height: 26px;
 		margin-bottom: 10px;
 	}
 
-	.reason__number--first,
-	.reason__number--second {
+	.reason__number--city,
+	.reason__number--bridge {
 		width: 66%;
 	}
 	
-	.reason__description--first
+	.reason__description--city
 	 {
 		width: 66%;
 	}
 
-	.reason__description--second  {
+	.reason__description--bridge  {
 		width: 58%;
 	}
 
-	.reason__img--first {
+	.reason__img--city {
 		background-image: url("../img/photo-city-desktop.jpg");
 	}
 
-	.reason__img--second {
+	.reason__img--bridge {
 		order: -1;
 		background-image: url("../img/photo-bridge-desktop.jpg");
 	}
@@ -180,11 +302,12 @@
 }
 
 @media(min-width: @desktop-width) {
-	.reason__title--first {
+
+	.reason__title--city {
 		width: 31%;
 	}
 
-	.reason__title--second {
+	.reason__title--bridge {
 		width: 40%;
 
 		& br {
@@ -192,8 +315,8 @@
 		}
 	}
 
-	.reason__text--first,
-	.reason__text--second {
+	.reason__text--city,
+	.reason__text--bridge {
 		padding: 55px 0;
 	}
 
