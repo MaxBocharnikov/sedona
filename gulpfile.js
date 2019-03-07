@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     embedSvg = require('gulp-embed-svg'),
     webp = require("gulp-webp"),
-    del = require('del');
+    del = require('del'),
+    rigger = require('gulp-rigger'),
     reload = browserSync.reload;
 
 var path = {
@@ -62,6 +63,7 @@ var config = {
 gulp.task('html:build', function (done) {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(plumber())
+        .pipe(rigger())
         .pipe(embedSvg({
             selectors: '.sprite-svg', // only replace tags with the class inline-svg
             root: 'src/img'
