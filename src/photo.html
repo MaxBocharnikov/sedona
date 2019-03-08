@@ -36,7 +36,7 @@
 
               <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
-              <source media="(max-width: 768px)" srcset="img/photo-1-mobile.jpg">
+              <source media="(max-width: 767px)" srcset="img/photo-1-mobile.jpg">
 
               <!-- Для браузеров, которые не поддерживают тег <picture> всегда подгружаем desktop изображение -->
               <img src="img/photo-1-desktop.jpg">
@@ -70,7 +70,7 @@
 
               <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg">
-              <source media="(max-width: 768px)" srcset="img/photo-2-mobile.jpg">
+              <source media="(max-width: 767px)" srcset="img/photo-2-mobile.jpg">
 
               <!-- Для браузеров, которые не поддерживают тег <picture> всегда подгружаем desktop изображение -->
               <img src="img/photo-2-desktop.jpg">
@@ -104,7 +104,7 @@
 
               <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg">
-              <source media="(max-width: 768px)" srcset="img/photo-3-mobile.jpg">
+              <source media="(max-width: 767px)" srcset="img/photo-3-mobile.jpg">
 
               <!-- Для браузеров, которые не поддерживают тег <picture> всегда подгружаем desktop изображение -->
               <img src="img/photo-3-desktop.jpg">
@@ -138,7 +138,7 @@
 
               <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg">
-              <source media="(max-width: 768px)" srcset="img/photo-4-mobile.jpg">
+              <source media="(max-width: 767px)" srcset="img/photo-4-mobile.jpg">
 
               <!-- Для браузеров, которые не поддерживают тег <picture> всегда подгружаем desktop изображение -->
               <img src="img/photo-4-desktop.jpg">
@@ -159,6 +159,52 @@
             </div>
         </div>
         </div>
+      </div>
+      
+    </section>
+
+    <section class="page-video">
+      <div class="page-video__wrapper">
+        <h2 class="page-video__title">Все еще сомневаетесь?</h2>
+        <p class="page-video__description">Смотрите видеопрезентацию и скорее за билетами, пока <br> они не подорожали в очередной раз!</p>
+        
+        <figure class="page-video__video">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop.webp" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/video-mobile.webp" type="image/webp">
+
+            <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg">
+            <source media="(max-width: 767px)" srcset="img/video-mobile.jpg">
+            <img src="img/video-desktop.jpg" alt="video">
+          </picture>
+        </figure>
+
+        <div class="page-video__volume">
+          <div class="page-video__scale">
+            <div class="page-video__slider"></div>
+          </div>
+        </div>
+
+        <div class="page-video__settings">
+          <div class="page-video__button page-video__button--reply">
+            <svg width="16" height="20">
+                   <use xlink:href="#icon-reply"></use>
+              </svg>
+          </div>
+          <div class="page-video__button page-video__button--sub">
+            <svg width="32" height="20">
+                   <use xlink:href="#icon-sub"></use>
+              </svg>
+          </div>
+          <div class="page-video__button page-video__button--fullscreen">
+            <svg width="20" height="20">
+                   <use xlink:href="#icon-fullscreen"></use>
+              </svg>
+          </div>
+        </div>
+
       </div>
       
     </section>
