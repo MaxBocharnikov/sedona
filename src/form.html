@@ -32,13 +32,13 @@
               <h3 class="page-form__title page-form__title--fio">Представьтесь:</h3>
 
               <div class="page-form__field page-form__field--fio page-form__field--name">
-                <label class="page-form__label page-form__label--fio" for="name">Имя*:</label>
-                <input class="page-form__input page-form__input--fio" type="text" name="name" id="name" placeholder="Петр">
+                <label class="page-form__label page-form__label--fio" for="firstname">Имя*:</label>
+                <input class="page-form__input page-form__input--fio page-form__input--name" type="text" name="firstname" id="firstname" placeholder="Петр">
               </div>
 
               <div class="page-form__field page-form__field--fio page-form__field--lastname">
                 <label class="page-form__label page-form__label--fio" for="lastname">Фамилия*:</label>
-                <input class="page-form__input page-form__input--fio" type="text" name="lastname" id="lastname" placeholder="Иванов">
+                <input class="page-form__input page-form__input--fio page-form__input--lastname" type="text" name="lastname" id="lastname" placeholder="Иванов">
               </div>
 
               <div class="page-form__field page-form__field--fio page-form__field--middlename">
@@ -56,8 +56,8 @@
               <div class="page-form__subcontainer--contacts">
                 <div class="page-form__field page-form__field--contacts page-form__field--phone">
                   <label class="page-form__label page-form__label--contacts page-form__label--phone" for="phone"><span>Контактный</span> телефон*:</label>
-                  <input class="page-form__input page-form__input--contacts" type="text" name="phone" id="phone" placeholder="Введите телефон">
-                  <span class="page-form__additional page-form__additional--contacts">
+                  <input class="page-form__input page-form__input--contacts page-form__input--phone" type="text" name="phone" id="phone" placeholder="Введите телефон">
+                  <span class="page-form__additional page-form__additional--contacts page-form__additional--phone">
                     <svg width="18" height="18">
                       <use xlink:href="#icon-phone"></use>
                     </svg>
@@ -66,8 +66,8 @@
 
                 <div class="page-form__field page-form__field--contacts page-form__field--email">
                   <label class="page-form__label page-form__label--contacts page-form__label--email" for="email">Электронная почта*:</label>
-                  <input class="page-form__input page-form__input--contacts" type="text" name="email" id="email" placeholder="Введите e-mail">
-                  <span class="page-form__additional page-form__additional--contacts">
+                  <input class="page-form__input page-form__input--contacts page-form__input--email" type="text" name="email" id="email" placeholder="Введите e-mail">
+                  <span class="page-form__additional page-form__additional--contacts page-form__additional--email">
                     <svg width="16" height="12">
                       <use xlink:href="#icon-mail"></use>
                     </svg>
@@ -203,7 +203,7 @@
         <h3 class="modal__title">Что-то пошло<br> не так!</h3>
         <p class="modal__description modal__description--error">Проверьте поля, выделенные красным,<br> скорее всего вы забыли их заполнить</p>
       </div>
-      <button class="modal__button">Ок</button>
+      <button class="modal__button modal__button--error">Ок</button>
     </div>
   </section>
 
