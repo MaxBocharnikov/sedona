@@ -396,6 +396,8 @@ input[type='checkbox']:checked + label .page-form__indicator svg {
 		&--fio {
 			width: 50%;
 			margin-bottom: 71px;
+			padding-left: 15px;
+			box-sizing: border-box;
 		}
 
 		&--impression {
@@ -450,6 +452,7 @@ input[type='checkbox']:checked + label .page-form__indicator svg {
 
 		&--fio {
 			margin-bottom: 58px;
+			text-align: left;
 
 			&::before {
 				display: none;
@@ -461,6 +464,7 @@ input[type='checkbox']:checked + label .page-form__indicator svg {
 		}
 
 		&--impression {
+		text-align: left;
 
 			&::before {
 				display: none;
@@ -488,11 +492,14 @@ input[type='checkbox']:checked + label .page-form__indicator svg {
 	}
 
 	.page-form__subcontainer {
-		width: 469px;
-		margin: 0 auto;
+		&--attractions {
+			width: 469px;
+			margin: 0 auto;
 
-		display: flex;
-		flex-wrap: wrap;
+			display: flex;
+			flex-wrap: wrap;	
+		}
+		
 	}
 
 	.page-form__field {
@@ -540,9 +547,6 @@ input[type='checkbox']:checked + label .page-form__indicator svg {
 		}
 	}
 
-	.page-form__label {
-
-	}
 
 	.page-form__input {
 		overflow: hidden;
@@ -565,3 +569,108 @@ input[type='checkbox']:checked + label .page-form__indicator svg {
 	}
 
 }
+
+
+@media(min-width: @desktop-width) {
+	.page-form {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 102px;
+	}
+
+	.page-form__block {
+		&--attractions {
+			margin-bottom: 68px;
+		}
+	}
+
+	.page-form__title {
+		&--contacts {
+			margin-bottom: 76px;
+		}
+
+		&--impression {
+			padding-left: 80px;
+		}
+
+		&--attractions {
+			margin-bottom: 59px;
+		}
+
+
+	}
+
+	.page-form__subcontainer{
+		&--contacts {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&--attractions {
+			width: auto;
+			margin: 0;
+		}
+	}
+
+	.page-form__field {
+
+		&--contacts {
+			display: flex;
+			flex-wrap: nowrap;
+
+			margin-bottom: 0px;	
+		}
+
+		&--phone {
+			width: 400px;
+		}
+
+		&--email {
+			width: 480px;
+		}
+
+		&--attractions {
+			width: 25%;
+			box-sizing: border-box;
+			margin-bottom: 0;
+
+			&:last-child {
+				margin-bottom: inherit;
+			}
+		}
+	}
+
+	.page-form__label {
+
+		&--contacts {
+			margin: 0;
+			align-self: center;
+
+			& span {
+				display: none;
+			}
+		}
+
+		&--phone {
+			width: 85px;
+		}
+
+		&--email {
+			width: 164px;
+		}
+
+	}
+
+	.page-form__input {
+
+		&--contacts {
+			flex-grow: 1;
+		}
+	}
+
+	.page-form__additional {
+		top: 0;
+	}
+}
+
+
