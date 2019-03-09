@@ -140,6 +140,7 @@
 		margin-left: 22px;
 		width: calc(100% - 22px);
 		text-transform: uppercase;
+		margin-bottom: 9px;
 	}
 
 	&--impression,
@@ -160,8 +161,8 @@
 		flex-grow: 1;
 		height: 58px;
 
-		padding: 20px 9%;
-		padding-right: 12%;
+		padding: 20px 22px;
+		padding-right: 58px;
 		background: #F2F2F2;
 
 		border: none;
@@ -259,7 +260,7 @@
 	width: 58px;
 	height: 58px;
 
-	top: 25px;
+	top: 35px;
 	right: 0;
 
 	background: #E6E6E6;
@@ -267,7 +268,7 @@
 	& svg {
 		position: absolute;
 
-		fill: 000000;
+		fill: #000000;
 
 		top: 0;
 		left: 0;
@@ -361,4 +362,206 @@ input[type='radio']:checked + label .page-form__indicator::after {
 
 input[type='checkbox']:checked + label .page-form__indicator svg {
 	display: block;
+}
+
+.page-form__note {
+	display: none;
+}
+
+@media(min-width: @tablet-width) {
+	.page-form {
+		width: 84%;
+		margin: 0 auto;
+		margin-bottom: 97px;
+	}
+
+	.page-form__main {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.page-form__wrapper {
+		width: 100%;
+		margin: 0;
+
+	}
+
+	.page-form__block {
+		width: 100%;
+		padding: 0;
+		&::after {
+			display: none;
+		}
+
+		&--fio {
+			width: 50%;
+			margin-bottom: 71px;
+		}
+
+		&--impression {
+			order: -1;
+			width: 50%;
+			margin-bottom: 88px;
+		}
+
+		&--contacts {
+			margin-bottom: 56px;
+		}
+
+		&--attractions {
+			margin-bottom: 17px;
+		}
+
+		&--emotions {
+			margin-bottom: 58px;
+		}
+	}
+
+	.page-form__title {
+		position: relative;
+		font-size: 21px;
+
+		&::before {
+			content: "";
+			position: absolute;
+
+			width: 19%;
+			height: 1px;
+
+			top: 50%;
+			left: 0;
+
+			background: #DADADA;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+
+			width: 19%;
+			height: 1px;
+
+			top: 50%;
+			right: 0;
+
+			background: #DADADA;
+		}
+			
+
+		&--fio {
+			margin-bottom: 58px;
+
+			&::before {
+				display: none;
+			}
+			
+			&::after {
+				display: none;
+			}
+		}
+
+		&--impression {
+
+			&::before {
+				display: none;
+			}
+			
+			&::after {
+				display: none;
+			}
+
+			margin-bottom: 76px;
+		}
+
+		&--contacts {
+			margin-bottom: 29px;
+		}
+
+		&--attractions {
+			margin-bottom: 63px;
+		}
+
+		&--emotions {
+			margin-bottom: 60px;
+		}
+
+	}
+
+	.page-form__subcontainer {
+		width: 469px;
+		margin: 0 auto;
+
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.page-form__field {
+
+		&--impression {
+			margin-bottom: 53px;
+		}
+
+		&--fio {
+			margin-bottom: 17px;
+		}
+
+		&--contacts {
+			margin-bottom: 25px;
+		}
+
+		&--attractions {
+			width: calc(50% - 79px);
+			margin-bottom: 69px;
+
+			&:last-child {
+				margin-bottom: 69px;
+			}
+		}
+
+		&--bridge {
+			order:1;
+		}
+
+		&--park {
+			order:3;
+		}
+
+		&--mountain {
+			order:2;
+		}
+
+		&--rocks {
+			order:4;
+		}
+
+		&--submit {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.page-form__label {
+
+	}
+
+	.page-form__input {
+		overflow: hidden;
+
+		&--submit {
+			width: 50%;
+			background: #83B0D0;
+		}
+	}
+
+	.page-form__note {
+		font-size: 14px;
+		line-height: 26px;
+		color: @dark_gray;
+		text-transform: uppercase;
+
+		align-self: center;
+
+		display: block;
+	}
+
 }

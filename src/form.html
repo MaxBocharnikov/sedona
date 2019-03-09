@@ -79,7 +79,6 @@
           <div class="page-form__block page-form__block--impression">
             <div class="page-form__wrapper">
               <h3 class="page-form__title page-form__title--impression">Ваше общее впечатление:</h3>
-
               <div class="page-form__field page-form__field--impression page-form__field--positive">
                 <input checked class="page-form__input page-form__input--impression" type="radio" name="impression" id="positive" value="positive">
                 <label class="page-form__label page-form__label--impression" for="positive">Скорее положительное
@@ -109,49 +108,54 @@
             <div class="page-form__wrapper">
               <h3 class="page-form__title page-form__title--attractions">Посещенные<br> достопримечательности:</h3>
 
-              <div class="page-form__field page-form__field--attractions page-form__field--bridge">
-                <input checked class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="bridge" value="bridge">
-                <label class="page-form__label page-form__label--attractions" for="bridge">Мост Дьявола
-                  <span class="page-form__indicator page-form__indicator--attractions">
-                    <svg width="24" height="16">
-                      <use xlink:href="#icon-tick"></use>
-                    </svg>
-                  </span> 
-                </label>   
+              <div class="page-form__subcontainer">
+                
+                <div class="page-form__field page-form__field--attractions page-form__field--bridge">
+                  <input checked class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="bridge" value="bridge">
+                  <label class="page-form__label page-form__label--attractions" for="bridge">Мост Дьявола
+                    <span class="page-form__indicator page-form__indicator--attractions">
+                      <svg width="24" height="16">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                    </span> 
+                  </label>   
+                </div>
+
+                <div class="page-form__field page-form__field--attractions page-form__field--park">
+                  <input checked class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="park" value="park">
+                  <label class="page-form__label page-form__label--attractions" for="park">Слайд-парк
+                    <span class="page-form__indicator page-form__indicator--attractions">
+                      <svg width="24" height="16">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                    </span>
+                  </label>   
+                </div>
+
+                <div class="page-form__field page-form__field--attractions page-form__field--mountain">
+                  <input class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="mountain" value="mountain">
+                  <label class="page-form__label page-form__label--attractions" for="mountain">Гора-Колокол
+                    <span class="page-form__indicator page-form__indicator--attractions">
+                      <svg width="24" height="16">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                    </span>
+                  </label>   
+                </div>
+
+                <div class="page-form__field page-form__field--attractions page-form__field--rocks">
+                  <input checked class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="rocks" value="rocks">
+                  <label class="page-form__label page-form__label--attractions" for="rocks">Красные скалы
+                    <span class="page-form__indicator page-form__indicator--attractions">
+                      <svg width="24" height="16">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                    </span>
+                  </label>   
+                </div>
+
               </div>
 
-              <div class="page-form__field page-form__field--attractions page-form__field--park">
-                <input checked class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="park" value="park">
-                <label class="page-form__label page-form__label--attractions" for="park">Слайд-парк
-                  <span class="page-form__indicator page-form__indicator--attractions">
-                    <svg width="24" height="16">
-                      <use xlink:href="#icon-tick"></use>
-                    </svg>
-                  </span>
-                </label>   
-              </div>
-
-              <div class="page-form__field page-form__field--attractions page-form__field--mountain">
-                <input class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="mountain" value="mountain">
-                <label class="page-form__label page-form__label--attractions" for="mountain">Гора-Колокол
-                  <span class="page-form__indicator page-form__indicator--attractions">
-                    <svg width="24" height="16">
-                      <use xlink:href="#icon-tick"></use>
-                    </svg>
-                  </span>
-                </label>   
-              </div>
-
-              <div class="page-form__field page-form__field--attractions page-form__field--rocks">
-                <input checked class="page-form__input page-form__input--attractions" type="checkbox" name="attractions" id="rocks" value="rocks">
-                <label class="page-form__label page-form__label--attractions" for="rocks">Красные скалы
-                  <span class="page-form__indicator page-form__indicator--attractions">
-                    <svg width="24" height="16">
-                      <use xlink:href="#icon-tick"></use>
-                    </svg>
-                  </span>
-                </label>   
-              </div>
             </div>
           </div>
 
@@ -171,6 +175,7 @@
             <div class="page-form__wrapper">
               <div class="page-form__field page-form__field--submit">
                 <input class="page-form__input page-form__input--submit" type="submit" name="submit" id="submit" value="Отправить отзыв">
+                <span class="page-form__note">* - Обязательные поля</span>
               </div>
             </div>
           </div>
