@@ -4,14 +4,18 @@
 }
 
 .page-footer__hashtag {
-
-
-	font-size: 21px;
-	line-height: 26px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-
+	& a {
+		display: block;
+		font-size: 21px;
+		line-height: 26px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		cursor: pointer;
+		color: #000000;
+		text-decoration: none;
+	}
+	
 	margin-bottom: 40px;
 }
 
@@ -26,11 +30,12 @@
 .page-footer__social {
 	position: relative;
 	width: 46px;
+	height: 48px;
 	box-sizing: border-box;
-	padding: 17px 14px;
 	margin-right: 6px;
+	cursor: pointer;
 
-	font-size: 0.09px;
+	font-size: 0;
 	background: #69B1D3;
 
 	& svg {
@@ -90,6 +95,7 @@
 
 	padding-right: 12px;
 	box-sizing: border-box;
+	cursor: pointer;
 
 	font-size: 14px;
 	line-height: 26px;
